@@ -1,7 +1,7 @@
 $('#result').hide()
 
 $('#example').click(() => {
-  let cmdExample = `curl -X GET "https://mock.trueid.net/customer/subscription/v2/accounts/01234/subscription?offer_code=EPL_RC_12M&offer_code=EPL_RC_6M&status=active&status=future_active&active=true&order=desc&page=1&limit=20" -H "accept: application/json"`
+  let cmdExample = `curl https://sv443.net/jokeapi/v2/joke/Any`
   $('#inputArea').val(cmdExample)
   $('#btn')[0].click()
 })

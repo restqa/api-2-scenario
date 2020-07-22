@@ -25,11 +25,11 @@ express()
     result.push(`  And I have the path "${url.pathname}"`)
     result.push(`  And I have the method "${request.method.toUpperCase()}"`)
 
-    Object.keys(request.queries).forEach(key => {
+    request.queries && Object.keys(request.queries).forEach(key => {
       result.push(`  And the query parameter contains "${key}" as "${request.queries[key]}"`)
     })
 
-    Object.keys(request.headers).forEach(key => {
+    request.header && Object.keys(request.headers).forEach(key => {
       result.push(`  And the header contains "${key}" as "${request.headers[key]}"`)
     })
 
