@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Converts an api call to a Restqa test automation scenario",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/restqa/api-2-scenario.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/restqa/api-2-scenario/issues"
+  },
+  "homepage": "https://github.com/restqa/api-2-scenario#readme",
+  "dependencies": {
+    "curlconverter": "^3.6.0",
+    "express": "^4.17.1",
+    "flat": "^5.0.0",
+    "got": "^11.5.1",
+    "parse-curl-js": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

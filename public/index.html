@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title> Bulkit :: Cards</title>
+    <link rel="icon" type="image/png" href="https://restqa.io/assets/img/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" href="https://restqa.io/assets/css/bulma.css">
+    <link rel="stylesheet" href="https://restqa.io/assets/css/app.css">
+    <link rel="stylesheet" href="https://restqa.io/assets/css/core_kit7.css">
+
+</head>
+
+<body>
+    <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+    <!-- Hero and nav -->
+    <div class="hero is-relative is-theme-primary">
+    </div>
+    <div class="section">
+      <div class="container">
+      <div id="flex-card" class="section-title-wrapper has-text-centered">
+          <div class="bg-number">1</div>
+          <h2 class="title section-title has-text-centered dark-text text-bold">
+            API Scenario Generator
+          </h2>
+          <p>Fear of the white page, let us give you a booster on creating test sceanrio.</p>
+      </div>
+        <div class="control">
+          <p style="text-align: right"><a  id="example">Use an example</a></p>
+          <textarea class="textarea" id="inputArea" rows="5" placeholder="Paste your curl commande here..."></textarea>
+        </div>
+        <p class="pt-40 pb-40  has-text-centered">
+          <a class="button button-cta btn-align raised rounded secondary-btn" id="btn">Generate scenario</a>
+        </p>
+      <div class="flex-card simple-shadow" id="result">
+            <div class="card-body">
+                <div class="content">
+                    <h2 class="no-margin">Here you go!</h2>
+                    <p class="pt-10">Your test scenario is ready, you just need to copy paste it into your restqa project.</p>
+                    <hr />
+                    <pre id="scenario"></pre>
+                    <div class="has-text-centered">
+                      <a class="button button-cta accent-btn btn-outlined rounded" id="copy"><i class="fa fa-copy"></i> Copy</a>
+                    </div>
+                    <hr />
+                    <div class="has-text-centered">
+                      <h3>Ready ?</h3>
+                      <img id="funGif" />
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+  <script src="assets/js/app.js"></script>
+
+  <!-- Bulkit js -->
+  <script src="https://restqa.io/assets/js/functions.js"></script>
+  <script src="https://restqa.io/assets/js/main.js"></script>
+</body>
+</html>
