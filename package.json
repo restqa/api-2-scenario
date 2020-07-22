@@ -4,8 +4,8 @@
   "description": "Converts an api call to a Restqa test automation scenario",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon index.js",
-    "start": "node index.js",
+    "start:dev": "nodemon sever.js",
+    "start": "node sever.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
