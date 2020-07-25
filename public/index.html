@@ -20,17 +20,33 @@
 <body>
     <div class="pageloader"></div>
     <div class="infraloader is-active"></div>
+    <div 
+      style="
+        height: 40px;
+        background: #4A00E0;
+        padding-top: 5px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        font-weight:bold;
+        color: #fff;
+        width: 100%;
+        z-index: 1000;"
+      id="copied">Copied !</div>
+
     <!-- Hero and nav -->
     <div class="hero is-relative is-theme-primary">
     </div>
     <div class="section">
       <div class="container">
       <div id="flex-card" class="section-title-wrapper has-text-centered">
-          <div class="bg-number">1</div>
           <h2 class="title section-title has-text-centered dark-text text-bold">
             API Scenario Generator
           </h2>
-          <p>Fear of the white page, let us give you a booster on creating test sceanrio.</p>
+          <p>
+            Fear of the white page, let us give you a booster on creating API test scenario. <br/>
+            (Your url needs to be publicly accessible)
+          </p>
       </div>
         <div class="control">
           <p style="text-align: right"><a  id="example">Use an example</a></p>
@@ -40,22 +56,51 @@
           <a class="button button-cta btn-align raised rounded secondary-btn" id="btn">Generate scenario</a>
         </p>
       <div class="flex-card simple-shadow" id="result">
-            <div class="card-body">
+        <p class="pt-40 pb-40  has-text-centered">
+          <img id="loader" src="assets/img/loader.gif" />
+        </p>
+            <div class="card-body" id="fail">
+              <h2 class="no-margin">Sorry...  🥺</h2>
+              <p class="pt-10">
+               For some reason we can't create the Scenario from your curl command. <br/><br />
+               Error message : 
+              </p>
+              <pre>
+                this is when its failing 
+              </pre>
+              <p class="pt-10 has-text-centered">
+               Maybe your case is not handled, feel free to open an issue or even create a pull request
+               <br />
+               <br />
+               <!-- Place this tag where you want the button to render. -->
+               <a class="github-button" href="https://github.com/restqa/api-2-scenario/issues" data-size="large" aria-label="Issue restqa/api-2-scenario on GitHub">Issue</a>
+               <br />
+               <br />
+              </p>
+            </div>
+            <div class="card-body" id="success">
                 <div class="content">
                     <h2 class="no-margin">Here you go!</h2>
-                    <p class="pt-10">Your test scenario is ready, you just need to copy paste it into your restqa project.</p>
+                    <p class="pt-10">
+                      Your test scenario is ready, you just need to copy paste it into your restqa project.
+                      <a class="copy">Copy the result</a>
+                    </p>
                     <hr />
                     <pre id="scenario"></pre>
                     <div class="has-text-centered">
-                      <a class="button button-cta accent-btn btn-outlined rounded" id="copy"><i class="fa fa-copy"></i> Copy</a>
+                      <a class="button button-cta accent-btn btn-outlined rounded copy"><i class="fa fa-copy"></i> Copy</a>
                     </div>
                     <hr />
-                    <div class="has-text-centered">
-                      <h3>Ready ?</h3>
-                      <img id="funGif" />
-                    </div>
                 </div>
             </div>
+            <div id="gif" class="has-text-centered">
+              <h3></h3>
+              <img  />
+            </div>
+        </div>
+        <div class="has-text-centered">
+          <br /></br />
+          <a class="github-button" href="https://github.com/restqa/api-2-scenario/fork" data-size="large" aria-label="Fork restqa/api-2-scenario on GitHub">Fork</a>
         </div>
       </div>
     </div>
@@ -67,5 +112,7 @@
   <!-- Bulkit js -->
   <script src="https://restqa.io/assets/js/functions.js"></script>
   <script src="https://restqa.io/assets/js/main.js"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
