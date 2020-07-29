@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "nodemon sever.js",
     "start": "node sever.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,13 @@
     "got": "^11.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "standard": {
+    "globals": [
+      "$",
+      "jQuery"
+    ]
   }
 }

@@ -1,4 +1,4 @@
-function reset() {
+function reset () {
   $('#copied').hide()
   $('#result').hide()
   $('#result #loader').show()
@@ -10,18 +10,17 @@ function reset() {
 }
 
 $('#example').click(() => {
-  let cmdExample = `curl https://sv443.net/jokeapi/v2/joke/Any`
+  const cmdExample = 'curl https://sv443.net/jokeapi/v2/joke/Any'
   $('#inputArea').val(cmdExample)
   $('#btn')[0].click()
 })
 
 $('#btn').click(() => {
-  let data = $('#inputArea').val()
+  const data = $('#inputArea').val()
   if (!data) return
 
-
   jQuery.ajax({
-    type: "POST",
+    type: 'POST',
     url: '/curl',
     data: {
       cmd: data
@@ -54,14 +53,13 @@ $('#btn').click(() => {
   })
 })
 
-
 $('.copy').click(() => {
-  const el = document.createElement('textarea');
+  const el = document.createElement('textarea')
   el.value = $('#scenario').text()
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
-  document.body.removeChild(el);
+  document.body.appendChild(el)
+  el.select()
+  document.execCommand('copy')
+  document.body.removeChild(el)
   $('#copied').show()
   setTimeout(() => {
     $('#copied').hide()
