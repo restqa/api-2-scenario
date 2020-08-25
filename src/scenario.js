@@ -48,6 +48,11 @@ exports.get = (cmd) => {
 
   result.push('When I run the API')
 
+  if (request.queries) {
+    request.searchParams = request.queries
+  }
+  console.log(request)
+
   return got(request).then(_ => _).catch(err => err.response)
     .then(_ => {
       result.push(`Then I should receive a response with the status ${_.statusCode}`)
