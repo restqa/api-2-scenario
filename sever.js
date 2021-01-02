@@ -1,5 +1,5 @@
 const express = require('express')
-const Scenario = require('./src/scenario')
+const { Generate } = require('@restqa/restqa')
 const Gif = require('./src/gif')
 
 global.$ = {
@@ -16,12 +16,11 @@ express()
   .post('/curl', express.urlencoded({ extended: true }), (req, res) => {
     try {
       const { cmd } = req.body
-      if ('curl' !== cmd.trim().split(' ')[0]) {
-        throw new Error('Can you share a curl command, please') 
+      if (cmd.trim().split(' ')[0] !== 'curl') {
+        throw new Error('Can you share a curl command, please')
       }
 
-      Scenario
-        .get(cmd)
+      Generate(cmd)
         .then(result => res.send(result))
         .catch(err => {
           throw err
@@ -37,6 +36,4 @@ express()
   .get('/error.gif', (req, res) => {
     Gif.get('error').then(url => res.send(url))
   })
-  .listen($.config.port, () => {
-    console.log(`Server start on the port ${$.config.port}`)
-  })
+  .listen($.config.port, () => console.log(`Server start on the port ${$.config.port}`))

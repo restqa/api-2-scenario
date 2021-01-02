@@ -1,4 +1,4 @@
-const got = require('got')
+const got = require('@restqa/restqapi/node_modules/got')
 const { URL } = require('url')
 
 exports.get = (tag) => {
@@ -11,7 +11,7 @@ exports.get = (tag) => {
     })
     .catch(_ => {
       let url = 'https://media.giphy.com/media/8YHmc8luwmJJjFY7zh/giphy.gif'
-      if ('error' === tag) url = 'https://media.giphy.com/media/dlMIwDQAxXn1K/giphy.gif'
+      if (tag === 'error') url = 'https://media.giphy.com/media/dlMIwDQAxXn1K/giphy.gif'
       return url
     })
 }
