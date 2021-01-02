@@ -13,7 +13,7 @@ Take a look : [https://api2scenario.restqa.io](https://api2scenario.restqa.io)
 ## Good To Know.
 
 This website is just a user interface for a native feature of RestQA.
-If you want to know more about the generation take a look a the [documentation](http://docs.restqa.io/api/api-reference/)
+If you want to know more about how the test scenrio are generated, take a look at the [documentation](http://docs.restqa.io/api/api-reference/)
 
 
 ## Development Guide.
